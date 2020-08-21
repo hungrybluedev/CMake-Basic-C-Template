@@ -3,9 +3,12 @@ name: Run Tests on Ubuntu
 on: [push, pull_request]
 
 jobs:
-  build-debug:
-    name: Create Debug build with CMake on Ubuntu
+  build:
+    name: Create Debug and Release builds with CMake on Ubuntu
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        type: [Debug, Release]
     steps:
       - uses: actions/checkout@v1
         with:
@@ -19,29 +22,8 @@ jobs:
         with:
           cmakeGenerator: "UnixMakefiles"
           cmakeListsOrSettingsJson: "CMakeListsTxtBasic"
-          buildDirectory: "${{ github.workspace }}/debug"
+          cmakeBuildType: ${{ matrix.type }}
+          buildDirectory: "${{ github.workspace }}/${{ matrix.type }}"
 
       - name: Run the built executable
-        run: ${{ github.workspace }}/debug/main
-
-  build-release:
-    name: Create Release build with CMake on Ubuntu
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-        with:
-          submodules: true
-
-      - name: Install latest CMake
-        uses: lukka/get-cmake@latest
-
-      - name: Run CMake with regular Unix Makefiles
-        uses: lukka/run-cmake@v2
-        with:
-          cmakeGenerator: "UnixMakefiles"
-          cmakeListsOrSettingsJson: "CMakeListsTxtBasic"
-          cmakeBuildType: Release
-          buildDirectory: "${{ github.workspace }}/release"
-
-      - name: Run the built executable
-        run: ${{ github.workspace }}/release/main
+        run: ${{ github.workspace }}/${{ matrix.type }}/main
