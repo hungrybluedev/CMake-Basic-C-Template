@@ -1,9 +1,9 @@
-name: Run cmake on Ubuntu
+name: Run Tests on Ubuntu
 
 on: [push, pull_request]
 
 jobs:
-  build:
+  build-debug:
     name: Create Debug build with CMake on Ubuntu
     runs-on: ubuntu-latest
     steps:
@@ -23,3 +23,25 @@ jobs:
 
       - name: Run the built executable
         run: ${{ github.workspace }}/debug/main
+
+  build-release:
+    name: Create Release build with CMake on Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          submodules: true
+
+      - name: Install latest CMake
+        uses: lukka/get-cmake@latest
+
+      - name: Run CMake with regular Unix Makefiles
+        uses: lukka/run-cmake@v2
+        with:
+          cmakeGenerator: "UnixMakefiles"
+          cmakeListsOrSettingsJson: "CMakeListsTxtBasic"
+          cmakeBuildType: Release
+          buildDirectory: "${{ github.workspace }}/release"
+
+      - name: Run the built executable
+        run: ${{ github.workspace }}/release/main
