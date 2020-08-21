@@ -7,7 +7,7 @@ jobs:
     name: Create Debug and Release builds with CMake on Ubuntu
     runs-on: ${{ matrix.os }}
     if: |
-      !contains(format('{0} {1} {2}', github.event.head_commit.message, github.event.pull_request.title, github.event.pull_request.body), '[skip ci]')
+      !contains(github.event.head_commit.message), '[skip ci]')
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
