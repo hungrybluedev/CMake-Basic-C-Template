@@ -42,6 +42,18 @@ To build a release version:
 
 Check [this link](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html) for more information of the different configurations available.
 
+## Read The `.github/workflows/main.yml` File
+
+A lot of time and effort has been invested into this file. Incrementally, I figured out the things I needed to do in order to ensure that the commits that are pushed to this repository are checked automatically. This file is also very small (comapared to existing solutions) because of a few special features available due to the Github Actions API. Briefly the steps performed are:
+
+1. Installing CMake (using the [get-cmake action](https://github.com/marketplace/actions/get-cmake))
+2. Running CMake (Build file generation and the actual building in one step) using the [run-cmake action](https://github.com/marketplace/actions/run-cmake).
+3. Executing the binary that has been built.
+4. Performing this for both **Debug** and **Release**.
+5. Performing this for all the three operating systems: Ubuntu, MacOS and Windows (whatever the latest version happens to be).
+
+There is also an option to skip the CI on a push if the commit message/body contains `[skip ci]`.
+
 ## Reference
 
 Almost all the material is derived from [An Introduction to Modern CMake](https://gitlab.com/CLIUtils/modern-cmake) by Henry Schreiner and others. Other sources will be mentioned as they pop up.
