@@ -1,8 +1,9 @@
 # Template for CMake based C Projects
 
-![LGTM Grade](https://img.shields.io/lgtm/grade/cpp/github/hungrybluedev/CMake-Basic-C-Template)
-![LGTM Alerts](https://img.shields.io/lgtm/alerts/github/hungrybluedev/CMake-Basic-C-Template)
-![GitHub](https://img.shields.io/github/license/hungrybluedev/CMake-Basic-C-Template)
+[![LGTM Grade](https://img.shields.io/lgtm/grade/cpp/github/hungrybluedev/CMake-Basic-C-Template)](https://lgtm.com/projects/g/hungrybluedev/CMake-Basic-C-Template/context:cpp)
+[![LGTM Alerts](https://img.shields.io/lgtm/alerts/github/hungrybluedev/CMake-Basic-C-Template)](https://lgtm.com/projects/g/hungrybluedev/CMake-Basic-C-Template/alerts/)
+[![GitHub](https://img.shields.io/github/license/hungrybluedev/CMake-Basic-C-Template)](LICENSE)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/hungrybluedev/CMake-Basic-C-Template/Cross-platform%20CMake%20Builds?label=Cross-platform%20build)](https://github.com/hungrybluedev/CMake-Basic-C-Template/actions)
 
 ## Why?
 
