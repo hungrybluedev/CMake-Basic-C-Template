@@ -8,6 +8,5 @@ int main(int argc, char const *argv[])
 {
   printf("Introduction project version: %s\n", INTRODUCTION_VERSION);
   printf("The answer is %d\n", get_answer());
-  printf("JUST WANT TO SEE IT FAIL ONCE. I'm getting the hang of using Github actions.\n");
-  return EXIT_FAILURE;
+  return EXIT_SUCCESS;
 }
