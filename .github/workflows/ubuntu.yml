@@ -20,7 +20,6 @@ jobs:
       - name: Run CMake with regular Unix Makefiles
         uses: lukka/run-cmake@v2
         with:
-          cmakeGenerator: "UnixMakefiles"
           cmakeListsOrSettingsJson: "CMakeListsTxtBasic"
           cmakeBuildType: ${{ matrix.type }}
           buildDirectory: "${{ github.workspace }}/${{ matrix.type }}"
