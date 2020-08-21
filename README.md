@@ -54,6 +54,8 @@ A lot of time and effort has been invested into this file. Incrementally, I figu
 
 There is also an option to skip the CI on a push if the commit message/body contains `[skip ci]`.
 
+You can also use [act](https://github.com/nektos/act) to run the actions locally to ensure that they pass (at least on Ubuntu) before pushing to the remote repository.
+
 ## Reference
 
 Almost all the material is derived from [An Introduction to Modern CMake](https://gitlab.com/CLIUtils/modern-cmake) by Henry Schreiner and others. Other sources will be mentioned as they pop up.
