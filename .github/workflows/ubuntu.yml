@@ -19,3 +19,7 @@ jobs:
         with:
           cmakeGenerator: "UnixMakefiles"
           cmakeListsOrSettingsJson: "CMakeListsTxtBasic"
+          buildDirectory: "${{ github.workspace }}/debug"
+
+      - name: Run the built executable
+        run: ${{ github.workspace }}/debug/main
