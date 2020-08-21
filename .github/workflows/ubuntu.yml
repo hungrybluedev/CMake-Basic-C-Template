@@ -1,0 +1,18 @@
+name: Run cmake on Ubuntu
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+
+    - name: Install latest CMake
+      uses: lukka/get-cmake@latest
+
+    - name: Run CMake with regular Unix Makefiles
+      uses: lukka/run-cmake@latest
+      with:
+        cmakeGenerator: "UnixMakefiles"
+        cmakeListsOrSettingsJson: "CMakeListsTxtBasic"
