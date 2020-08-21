@@ -37,12 +37,12 @@ set(CMAKE_C_STANDARD 99)
 # in order to ensure compatibility and simplicity.
 
 # Configuration for the util library
-add_library(util_lib STATIC
+add_library("util_lib-${PROJECT_VERSION}" STATIC
   src/introduction/util/util.c
   include/introduction/util/util.h
 )
-target_include_directories(util_lib PUBLIC include)
+target_include_directories("util_lib-${PROJECT_VERSION}" PUBLIC include)
 
 # Configuration for the final executable
-add_executable("main-${PROJECT_VERSION}" test/src/main.c)
-target_link_libraries("main-${PROJECT_VERSION}" PRIVATE util_lib)
+add_executable(main test/src/main.c)
+target_link_libraries(main PRIVATE "util_lib-${PROJECT_VERSION}")
