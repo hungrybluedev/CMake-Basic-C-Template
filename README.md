@@ -2,7 +2,6 @@
 
 ![LGTM Grade](https://img.shields.io/lgtm/grade/cpp/github/hungrybluedev/CMake-Basic-C-Template)
 ![LGTM Alerts](https://img.shields.io/lgtm/alerts/github/hungrybluedev/CMake-Basic-C-Template)
-![GitHub](https://img.shields.io/github/license/hungrybluedev/CMake-Basic-C-Template)
 
 ## Why?
 
