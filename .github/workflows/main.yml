@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   build:
-    name: Create Debug and Release builds with CMake on Ubuntu
+    name: Create Debug and Release builds with CMake on Ubuntu, MacOS and Windows
     runs-on: ${{ matrix.os }}
     if: |
       !contains(github.event.head_commit.message, '[skip ci]')
