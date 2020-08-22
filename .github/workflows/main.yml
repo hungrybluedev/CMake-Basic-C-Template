@@ -27,5 +27,8 @@ jobs:
           cmakeBuildType: ${{ matrix.type }}
           buildDirectory: "${{ github.workspace }}/${{ matrix.type }}"
 
+      - name: Change into the output directory
+        run: cd ${{ github.workspace }}/${{ matrix.type }}
+
       - name: Run the executables marked for testing
-        run: ${{ github.workspace }}/${{ matrix.type }}/ctest -j
+        run: ctest -j
