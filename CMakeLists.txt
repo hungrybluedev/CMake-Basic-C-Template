@@ -43,6 +43,13 @@ add_library("util_lib-${PROJECT_VERSION}" STATIC
 )
 target_include_directories("util_lib-${PROJECT_VERSION}" PUBLIC include)
 
+# Configuration for the munit testing library
+add_library(munit STATIC
+  test/src/external/munit/munit.c
+  test/include/external/munit/munit.h
+)
+target_include_directories(munit PUBLIC test/include/external/munit)
+
 # Configuration for the final executable
 add_executable(run-tests test/src/run-tests.c)
-target_link_libraries(run-tests PRIVATE "util_lib-${PROJECT_VERSION}")
+target_link_libraries(run-tests PRIVATE "util_lib-${PROJECT_VERSION}" munit)
