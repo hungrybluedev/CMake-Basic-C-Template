@@ -30,8 +30,6 @@ project(Introduction
   LANGUAGES C
 )
 
-enable_testing()
-
 # All targets must follow the C99 standard
 set(CMAKE_C_STANDARD 99)
 # This property can also be set on a per-target basis.
@@ -46,7 +44,5 @@ add_library("util_lib-${PROJECT_VERSION}" STATIC
 target_include_directories("util_lib-${PROJECT_VERSION}" PUBLIC include)
 
 # Configuration for the final executable
-add_executable(main test/src/main.c)
-target_link_libraries(main PRIVATE "util_lib-${PROJECT_VERSION}")
-
-add_test(NAME main COMMAND main)
+add_executable(run-tests test/src/run-tests.c)
+target_link_libraries(run-tests PRIVATE "util_lib-${PROJECT_VERSION}")
