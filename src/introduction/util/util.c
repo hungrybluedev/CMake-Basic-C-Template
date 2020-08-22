@@ -1,6 +1,3 @@
 #include <introduction/util/util.h>
 
-int get_answer()
-{
-  return 42;
-}
+int get_answer() { return 42; }
