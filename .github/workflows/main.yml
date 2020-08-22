@@ -20,7 +20,7 @@ jobs:
       - name: Install latest CMake
         uses: lukka/get-cmake@latest
 
-      - name: Run CMake with regular Unix Makefiles
+      - name: Run CMake (generation and build)
         uses: lukka/run-cmake@v2
         with:
           cmakeListsOrSettingsJson: "CMakeListsTxtBasic"
