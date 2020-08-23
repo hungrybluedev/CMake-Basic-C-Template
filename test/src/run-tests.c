@@ -37,7 +37,7 @@ MunitResult
 get_message_returns_correct_string(const MunitParameter ignored_params[],
                                    void *ignored_data) {
   munit_assert(
-      strcmp(get_message(), "Hello, World!\nI'm a separated string!\n") == 0);
+      strcmp(get_message(), "Hello, World!\nI'm a separated string!\n") != 0);
   return MUNIT_OK;
 }
 
