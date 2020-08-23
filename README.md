@@ -1,5 +1,7 @@
 # Template for CMake based C Projects
 
+## Badges
+
 | Description | Badges                                                                                                                                                                                                                                                                                                                                                      |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | LGTM        | [![LGTM Grade](https://img.shields.io/lgtm/grade/cpp/github/hungrybluedev/CMake-Basic-C-Template)](https://lgtm.com/projects/g/hungrybluedev/CMake-Basic-C-Template/context:cpp) [![LGTM Alerts](https://img.shields.io/lgtm/alerts/github/hungrybluedev/CMake-Basic-C-Template)](https://lgtm.com/projects/g/hungrybluedev/CMake-Basic-C-Template/alerts/) |
@@ -55,6 +57,15 @@ A lot of time and effort has been invested into this file. Incrementally, I figu
 5. Performing this for all the three operating systems: Ubuntu, MacOS and Windows (whatever the latest version happens to be).
 
 There is also an option to skip the CI on a push if the commit message/body contains `[skip ci]`.
+
+## Features
+
+1. Provides a good starting point for new **C99** projects.
+2. Pragmatic directory structure is suggested with the existing code.
+3. Readable CMake configuration that can be customised easily.
+4. Inclusion of [µnit](https://nemequ.github.io/munit/) as the recommended unit-testing framework. It can be changed easily; just read the CMake and use the given directory structture to add your own library of choice.
+5. Integration with Github Actions. It ensures cross-platform builds and ensures that all unit-tests are successful (unless skipped).
+6. Inclusion of suggested badges for the project's README.
 
 ## Reference
 
