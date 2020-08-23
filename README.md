@@ -8,6 +8,7 @@
 | Codacy      | [![Codacy grade](https://img.shields.io/codacy/grade/0963bb8a14b14ddcb5e6d5cdcbe7b704)](https://www.codacy.com/)                                                                                                                                                                                                                                            |
 | License     | [![GitHub](https://img.shields.io/github/license/hungrybluedev/CMake-Basic-C-Template)](LICENSE)                                                                                                                                                                                                                                                            |
 | CI/CD       | [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/hungrybluedev/CMake-Basic-C-Template/Cross-platform%20CMake%20Builds?label=Cross-platform%20build)](https://github.com/hungrybluedev/CMake-Basic-C-Template/actions)                                                                                                               |
+| Version     | [![GitHub release (latest by date)](https://img.shields.io/github/v/release/hungrybluedev/CMake-Basic-C-Template)](https://github.com/hungrybluedev/CMake-Basic-C-Template/releases)                                                                                                                                                                        |
 
 ## Introduction
 
